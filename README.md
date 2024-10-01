@@ -8,6 +8,12 @@ Run in `sbt` with cross-built Scala 2.13.x versions:
   * `++2.13.2 run` (error is present, also coincidentally the [introduction new Vector implementation](https://github.com/scala/scala/releases/tag/v2.13.2))
   * `++2.13.1 run` (no error!)
 
+Also, behavior varies with [`id-strategy` configuration](https://github.com/altoo-ag/scala-kryo-serialization/blob/main/core/src/main/resources/reference.conf#L34):
+  * incremental - works on all three scala versions
+  * automatic - java.lang.InstantiationError
+  * default - java.lang.InstantiationError
+  * explicit - java.lang.InstantiationError
+
 Tested with Java 11 and 17.
 
 ```

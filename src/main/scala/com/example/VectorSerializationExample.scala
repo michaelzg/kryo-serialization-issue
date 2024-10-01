@@ -36,6 +36,6 @@ object VectorSerializationExample extends App {
 
 class CustomKryoInitializer extends DefaultKryoInitializer {
   override def postInit(kryo: ScalaKryo): Unit = {
-    kryo.register(classOf[Vector[_]])
+    kryo.register(classOf[Vector[_]], 99)
   }
 }
