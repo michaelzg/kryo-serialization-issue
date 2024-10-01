@@ -10,7 +10,7 @@ scalaVersion := scala21315
 crossScalaVersions := Seq(scala21315, scala2132, scala2131)
 
 val akkaVersion = "2.6.20"
-val kryoSerializationVersion = "1.0.0"
+val kryoSerializationVersion = "2.5.1" // also fails on 1.0.0 (kryo 4)
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % akkaVersion,
