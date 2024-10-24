@@ -1,5 +1,7 @@
 # kryo-serialization-issue
 
+UPDATE: Solved in https://github.com/altoo-ag/scala-kryo-serialization/issues/19
+
 This is a reproducer for the error `java.lang.InstantiationError: scala.collection.immutable.Vector`
 and the following stack trace.
 
